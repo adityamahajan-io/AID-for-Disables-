@@ -52,5 +52,6 @@ def logout():
 
 
 if __name__ == "__main__":
+    app.config['SESSION_TYPE'] = 'filesystem'
     app.secret_key = os.urandom(12)
     app.run(debug=True)
