@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/dashboard.css" type="text/css">
+</head>
+
+<body>
+
+    {% block body %}
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3498DB;">
+        <a class="navbar-brand" href="/">AID for Disability</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pricing">Pricing</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12 text-center">
+                <h1>
+                    Patient : {{user.name}}
+                </h1>
+                <h5>
+                    <a href="/patient-info">See full patient information</a>
+                </h5>
+            </div>
+            <div class="col-md-12 mt-5">
+                <div class="cards">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Location History</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Last seen : </h6>
+                            <p class="card-text">
+                                10/5/2020 : 4:12 <br>
+                                10/5/2020 : 4:12 <br>
+                                10/5/2020 : 4:12 <br>
+                            </p>
+                            <a href="/location-history" class="card-link">See Full History</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Self Notes</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Remainder : </h6>
+                            <p class="card-text">
+                                <a href="">Get things from market</a> <br>
+                                <a href="">Get things from market</a><br>
+                                <a href="">Get things from market</a>
+                            </p>
+                            <a href="/notes" class="card-link">See all notes</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Speech to text</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Service</h6>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+                                veritatis necessitatibus, ipsa velit </p>
+                            <a href="#" class="card-link">Use Speech to text</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Text to Speech</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's
+                                content.</p>
+                            <a href="#" class="card-link">Use Text to Speech</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
