@@ -54,4 +54,4 @@ if __name__ == "__main__":
     import os
     app.secret_key = os.urandom(12)
     port = int(os.environ.get('PORT', 8080))
-    app.run(port=port)
+    app.run(host="106.66.28.241", port=port)
