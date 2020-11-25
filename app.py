@@ -4,7 +4,7 @@ import os
 import pymongo
 
 app = Flask(__name__)
-
+app.secret_key = os.urandom(12)
 testUser = {
     'name': "Virginia D Anderson",
     'sex': 'Female',
@@ -52,6 +52,5 @@ def logout():
 
 
 if __name__ == "__main__":
-    app.config['SESSION_TYPE'] = 'filesystem'
-    app.secret_key = 'some-random-key-here'
-    app.run()
+    app.secret_key = os.urandom(12)
+    app.run(debug=True)
