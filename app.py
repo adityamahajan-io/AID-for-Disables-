@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import Flask, flash, redirect, render_template, request, session, abort
 import os
+import pymongo
 
 app = Flask(__name__)
 
@@ -51,7 +52,5 @@ def logout():
 
 
 if __name__ == "__main__":
-    import os
     app.secret_key = os.urandom(12)
-    port = int(os.environ.get('PORT', 8080))
-    app.run(host="106.66.28.241", port=port)
+    app.run(debug=True)
